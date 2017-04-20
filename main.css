@@ -3,7 +3,8 @@ h1{
     font-size: 100px
 }
 #resultTranslate{
-    color: gray;
-    width: 100%;
-    height: auto;
+    width: 50%;
+    height: 130px;
+    float: right;
+    border-color: red;
 }
