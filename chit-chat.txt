@@ -1,0 +1,11 @@
+chit-chat
+
+homepage: https://www.ibm.com/watson/developercloud/language-translator.html
+
+demo: https://language-translator-demo.mybluemix.net/
+
+
+material design:
+    https://material.io/guidelines/material-design/introduction.html#
+
+
