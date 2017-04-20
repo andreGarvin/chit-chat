@@ -1,9 +1,9 @@
-h2{
-    margin-bottom: 0 !important;
-    margin-top:0 !important;
-}
 h1{
-     margin-bottom: 0 !important;
-    margin-top:0 !important;
+
     font-size: 100px
+}
+#resultTranslate{
+    color: gray;
+    width: 100%;
+    height: auto;
 }
