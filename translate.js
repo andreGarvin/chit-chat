@@ -4,6 +4,7 @@ $(document).ready(function() {
         translate();
     });
 });
+
 var API_key = 'AIzaSyCAg5StLQ3UHyaCdIdihjV8Od5sd8hGsDc';
 
 function translate( obj ) {
