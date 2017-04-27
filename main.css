@@ -6,6 +6,7 @@ h1{
     margin-bottom: 10px;
 }
 .center{
+<<<<<<< HEAD
     padding: 100px 0;
 }
 #flip{
@@ -15,3 +16,20 @@ h1{
 .Txt{
     margin: 20px 0px 20px 0px;
 }
+=======
+    padding: 100px 20px;
+}
+#flip{
+    float: right;
+    border-radius: 5px;
+    padding: 2px;
+}
+.Txt{
+    margin-top: 20px;
+    font-size: 20px;
+}
+#flipImg{
+    height: 25px;
+    width: 50px;
+}
+>>>>>>> 30980e0b112ca30b1d1e004a1c553acd3a15ec96
