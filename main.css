@@ -6,12 +6,17 @@ h1{
     font-size: 16px;
 }
 .center{
-    padding: 100px 50px;
+    padding: 100px 20px;
 }
 #flip{
     float: right;
     border-radius: 5px;
+    padding: 2px;
 }
 .Txt{
     margin-top: 20px;
+}
+#flipImg{
+    height: 25px;
+    width: 50px;
 }
