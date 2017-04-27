@@ -1,14 +1,3 @@
-// $(document).ready(function() {
-    
-//     $('#translate').click(function() {
-//         detect({
-//             type: 'transalte',
-//             text: 12321,
-//         });
-//     });
-// });
-
-
 function translate( obj ) {
     
     var API_key = 'AIzaSyCAg5StLQ3UHyaCdIdihjV8Od5sd8hGsDc';
@@ -24,6 +13,7 @@ function translate( obj ) {
         console.log( obj );
     })
 }
+
 
 // function detect( obj ) {
     

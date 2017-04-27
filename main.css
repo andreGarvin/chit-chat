@@ -2,14 +2,9 @@ h1{
 
     font-size: 100px
 }
-
-#resultTranslate {
-    width: 50%;
-    height: 130px;
-    float: right;
-    border-color: red;
-}
-
 .btn {
     margin-bottom: 10px;
+}
+.center{
+    padding: 100px 0;
 }
