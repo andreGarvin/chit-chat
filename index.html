@@ -12,30 +12,18 @@
         <div class="col-md-6 col-xs-6 col-sm-6" id="translateTxt">
             <div class="btn-group">
             <button class='btn btn-default dropdown-toggle Language' data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">language 1<span class="caret"></span></button>
-            <ul class="dropdown-menu">
-                <li>english</li>
-                <li>chinese</li>
-                <li>korean</li>
-                <li>french</li>
-                <li>spanish</li>
-            </ul>
+            <ul class="dropdown-menu"></ul>
             </div>
             <button role="button" id="flip" class="btn btn-primary">FLIP</button>
-            <textarea class="form-control Txt" rows="6"></textarea>
+            <textarea id='input_1' class="form-control Txt" rows="6"></textarea>
         </div>
 
         <div class="col-md-6 col-xs-6 col-sm-6" id="resultTranslate">
             <div class="btn-group">
-            <button class='btn btn-default dropdown-toggle Language' data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">language 2 <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-                <li>english</li>
-                <li>chinese</li>
-                <li>korean</li>
-                <li>french</li>
-                <li>spanish</li>
-            </ul>
+            <button id='btn-dropdown' class='btn btn-default dropdown-toggle Language' data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">language 2 <span class="caret"></span></button>
+            <ul class="dropdown-menu" aria-labelledby="btn-dropdown"></ul>
             </div>
-            <textarea class="form-control Txt" rows="6"></textarea>
+            <textarea id='input_2' class="form-control Txt" rows="6"></textarea>
         </div>
     </div>
 
