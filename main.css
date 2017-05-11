@@ -18,13 +18,32 @@ h1{
 #flip{
     float: right;
     border-radius: 5px;
-    padding: 200px, 20px;
 }
 .Txt{
     margin-top: 20px;
     font-size: 20px;
 }
-#flipImg{
-    height: 25px;
-    width: 50px;
+/*#flipImg{*/
+/*    height: 25px;*/
+/*    width: 50px;*/
+/*}*/
+@keyframes gifs {
+    0%   {color:red; left:0px; top:70px;}
+    25%  {color:yellow; left:600px; top:70px;}
+    50%  {color:blue; left:600px; top:220px;}
+    75%  {color:green; left:0px; top:220px;}
+    100% {color:red; left:0px; top:70px;}
+}
+#gif{
+    /*width: 100px;*/
+    /*height: 100px;*/
+    font-size: 60px;
+    color: red;
+    position: absolute;
+    animation-name: gifs;
+    animation-duration: 6s;
+    animation-iteration-count: 10;
+    margin-top: 300px;
+    margin-left: 300px;
+    
 }
