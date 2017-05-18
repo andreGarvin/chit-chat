@@ -93,3 +93,6 @@ $(document).ready(function() {
     });
     
 });
+$("#design").click(function(){
+    $("#gif").show()
+})
