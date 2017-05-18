@@ -6,6 +6,7 @@ function translate( obj, targetInput ) {
     
     var url = 'https://www.googleapis.com/language/translate/v2?q='+ obj.text.split(' ').join('+') +'&target='+ obj.lang +'&key=' + API_KEY;
 
+    
     $.getJSON(url, function( resp ) {
         
         resp = resp.data.translations[0];
@@ -20,6 +21,7 @@ function translate( obj, targetInput ) {
         
         $('#gif').html("<p>" + obj.resp_txt + "</p>");
     });
+    
 }
 
 
