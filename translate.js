@@ -18,7 +18,6 @@ function translate( obj, targetInput ) {
         
         $(targetInput).val( obj.resp_text );
         
-        // $('#gif').html("<p>" + obj.resp_txt + "</p>");
     });
 }
 
@@ -97,12 +96,13 @@ $(document).ready(function() {
         
         selectLang = $(this).attr('id');
         
+        // $('.Language').html();
         translate({ text: $('#input_1').val().length !== 0 ? $('#input_1').val() : $('#input_2').val(), lang: selectLang }, $('#input_1').val().length !== 0 ? 'input_1' : 'input_2');
-        // console.log( selectLang );
     });
     
-    // $("#design").click(function(){
+    $("#design").click(function(){
         
-    //     $("#gif").show();
-    // });
+        $("#gif").show();
+    });
+    
 });
