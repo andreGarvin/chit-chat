@@ -8,14 +8,10 @@ h1{
 .center{
     padding: 50px 0;
 }
-#flip{
-    float: right;
-    border-radius: 3px;
-}
 .Txt{
     margin: 20px 0px 20px 0px;
 }
-#flip{
+.second{
     float: right;
     border-radius: 5px;
 }
@@ -23,10 +19,6 @@ h1{
     margin-top: 20px;
     font-size: 20px;
 }
-/*#flipImg{*/
-/*    height: 25px;*/
-/*    width: 50px;*/
-/*}*/
 @keyframes gifs {
     0%   {color:red; left:0px; top:70px;}
     25%  {color:yellow; left:600px; top:70px;}
@@ -41,9 +33,9 @@ h1{
     color: red;
     position: absolute;
     animation-name: gifs;
-    animation-duration: 6s;
-    animation-iteration-count: 10;
+    animation-duration: 10s;
+    animation-iteration-count: 100;
     margin-top: 300px;
     margin-left: 300px;
-    
+    display: none;
 }
