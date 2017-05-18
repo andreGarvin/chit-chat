@@ -8,11 +8,11 @@ function translate( obj, inputTarget ) {
         
         resp = resp.data.translations[0];
         
-        obj.resp_text = resp.translatedText;
-        obj.detectLang = resp.detectedSourceLanguage;
+        // obj.resp_text = resp.translatedText;
+        // obj.detectLang = resp.detectedSourceLanguage;
     
         inputTarget = inputTarget === 'input_1' ? '#input_2' : '#input_1';
-        console.log( inputTarget );
+        
         $(inputTarget).val( obj.resp_text );
     });
 }
@@ -87,9 +87,9 @@ $(document).ready(function() {
         }
     });
     
-    $('.lang').click(function() {
+    $('li a .lang').click(function() {
         
-        $(this).attr('id');
+        console.log( $(this).attr('id') );
     });
     
 });
