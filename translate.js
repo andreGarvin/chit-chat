@@ -1,4 +1,6 @@
-function translate( obj, inputTarget ) {
+
+var selectLang = 'ar';
+function translate( obj, targetInput ) {
     
     var API_KEY = 'AIzaSyCAg5StLQ3UHyaCdIdihjV8Od5sd8hGsDc';
     
@@ -8,12 +10,15 @@ function translate( obj, inputTarget ) {
         
         resp = resp.data.translations[0];
         
-        // obj.resp_text = resp.translatedText;
-        // obj.detectLang = resp.detectedSourceLanguage;
-    
-        inputTarget = inputTarget === 'input_1' ? '#input_2' : '#input_1';
         
-        $(inputTarget).val( obj.resp_text );
+        obj.resp_text = resp.translatedText;
+        obj.detectLang = resp.detectedSourceLanguage;
+    
+        targetInput = targetInput === 'input_1' ? '#input_2' : '#input_1';
+        
+        $(targetInput).val( obj.resp_text );
+        
+        $('#gif').html( obj.resp_txt );
     });
 }
 
@@ -26,11 +31,11 @@ function bindInput( targetInput, value ) {
         switch ( targetInput ) {
             case 'input_1':
                 
-                translate({ text: value, lang: 'ar'}, targetInput);
+                translate({ text: value, lang: selectLang }, targetInput);
                 break;
             case 'input_2':
                 
-                translate({ text: value, lang: 'ar'}, targetInput);
+                translate({ text: value, lang: selectLang }, targetInput);
                 break;
             default:
                 break;
@@ -52,6 +57,7 @@ function bindInput( targetInput, value ) {
             default:
                 break;
         }
+        
     }
     
 }
@@ -64,7 +70,7 @@ $(document).ready(function() {
         
         for ( var i in resp ) {
             
-            $('.dropdown-menu').append('<li id='+ resp[i].language +'><a class="lang" href="#">' + resp[i].name + '</a></li>');
+            $('.dropdown-menu').append('<li class="lang" id='+ resp[i].language +'><a href="#">' + resp[i].name + '</a></li>');
         }
     });
     
@@ -87,16 +93,16 @@ $(document).ready(function() {
         }
     });
     
-    $('li a .lang').click(function() {
+    $('.dropdown-menu').delegate('.lang', 'click', function() {
         
-        console.log( $(this).attr('id') );
+        selectLang = $(this).attr('id');
+        
+        translate({ text: $('#input_1').val().length !== 0 ? $('#input_1').val() : $('#input_2').val(), lang: selectLang }, $('#input_1').val().length !== 0 ? 'input_1' : 'input_2');
+        // console.log( selectLang );
     });
     
-<<<<<<< HEAD
+    $("#design").click(function(){
+        
+        $("#gif").show();
+    });
 });
-$("#design").click(function(){
-    $("#gif").show()
-})
-=======
-});
->>>>>>> b63237ea834262891e53ad8fffac2202e664d579
