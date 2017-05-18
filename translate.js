@@ -18,6 +18,7 @@ function translate( obj, targetInput ) {
         
         $(targetInput).val( obj.resp_text );
         
+        $('#gif').html("<p>" + obj.resp_txt + "</p>");
     });
 }
 
@@ -104,5 +105,5 @@ $(document).ready(function() {
         
         $("#gif").show();
     });
-    
+
 });
