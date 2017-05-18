@@ -8,9 +8,6 @@ h1{
 .center{
     padding: 50px 0;
 }
-.Txt{
-    margin: 20px 0px 20px 0px;
-}
 .second{
     float: right;
     border-radius: 5px;
@@ -37,4 +34,5 @@ h1{
     animation-iteration-count: 100;
     margin-top: 300px;
     margin-left: 300px;
+    display: none;
 }
