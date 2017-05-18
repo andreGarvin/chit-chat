@@ -18,7 +18,7 @@ function translate( obj, targetInput ) {
         
         $(targetInput).val( obj.resp_text );
         
-        $('#gif').html( obj.resp_txt );
+        // $('#gif').html("<p>" + obj.resp_txt + "</p>");
     });
 }
 
@@ -101,8 +101,8 @@ $(document).ready(function() {
         // console.log( selectLang );
     });
     
-    $("#design").click(function(){
+    // $("#design").click(function(){
         
-        $("#gif").show();
-    });
+    //     $("#gif").show();
+    // });
 });
