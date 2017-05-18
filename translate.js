@@ -92,7 +92,11 @@ $(document).ready(function() {
         $(this).attr('id');
     });
     
+<<<<<<< HEAD
 });
 $("#design").click(function(){
     $("#gif").show()
 })
+=======
+});
+>>>>>>> b63237ea834262891e53ad8fffac2202e664d579
