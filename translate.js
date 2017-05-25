@@ -71,6 +71,7 @@ $(document).ready(function() {
         for ( var i in resp ) {
             
             $('.dropdown-menu').append('<li class="lang" id='+ resp[i].language +'><a href="#">' + resp[i].name + '</a></li>');
+            $(".language").append(resp[i].name);
         }
     });
     
@@ -99,10 +100,15 @@ $(document).ready(function() {
         
         translate({ text: $('#input_1').val().length !== 0 ? $('#input_1').val() : $('#input_2').val(), lang: selectLang }, $('#input_1').val().length !== 0 ? 'input_1' : 'input_2');
         // console.log( selectLang );
+        
     });
     
-    $("#design").click(function(){
-        
+});
+
+$("#design").click(function(){
         $("#gif").show();
-    });
+});
+
+$("#design").dblclick(function(){
+    $("#gif").hide();
 });
