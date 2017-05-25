@@ -2,25 +2,28 @@
 var selectLang = 'ar';
 function translate( obj, targetInput ) {
     
-    var API_KEY = 'AIzaSyCAg5StLQ3UHyaCdIdihjV8Od5sd8hGsDc';
+    if ( obj.text.length !== 0 ) {
+        
+        var API_KEY = 'AIzaSyCAg5StLQ3UHyaCdIdihjV8Od5sd8hGsDc';
     
-    var url = 'https://www.googleapis.com/language/translate/v2?q='+ obj.text.split(' ').join('+') +'&target='+ obj.lang +'&key=' + API_KEY;
+        var url = 'https://www.googleapis.com/language/translate/v2?q='+ obj.text.split(' ').join('+') +'&target='+ obj.lang +'&key=' + API_KEY;
 
     
-    $.getJSON(url, function( resp ) {
+        $.getJSON(url, function( resp ) {
         
-        resp = resp.data.translations[0];
+            resp = resp.data.translations[0];
         
         
-        obj.resp_text = resp.translatedText;
-        obj.detectLang = resp.detectedSourceLanguage;
+            obj.resp_text = resp.translatedText;
+            obj.detectLang = resp.detectedSourceLanguage;
     
-        targetInput = targetInput === 'input_1' ? '#input_2' : '#input_1';
+            targetInput = targetInput === 'input_1' ? '#input_2' : '#input_1';
         
-        $(targetInput).val( obj.resp_text );
+            $(targetInput).val( obj.resp_text );
         
-        $('#gif').html("<p>" + obj.resp_txt + "</p>");
-    });
+            $('#gif').html("<p>" + obj.resp_txt + "</p>");
+        });
+    }
     
 }
 
@@ -95,11 +98,22 @@ $(document).ready(function() {
         }
     });
     
+    function changeText( lang_id ) {
+        
+        $('.Language').click(function() {
+        
+            var lang_btn = $(this).attr('id');
+            var trg_txt = $('#'+lang_id).text();
+        
+            $('#' + lang_btn).text(trg_txt);
+        });
+    }
+    
     $('.dropdown-menu').delegate('.lang', 'click', function() {
         
         selectLang = $(this).attr('id');
         
-        // $('.Language').html();
+        changeText( selectLang );
         translate({ text: $('#input_1').val().length !== 0 ? $('#input_1').val() : $('#input_2').val(), lang: selectLang }, $('#input_1').val().length !== 0 ? 'input_1' : 'input_2');
     });
     
