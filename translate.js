@@ -76,6 +76,7 @@ $(document).ready(function() {
         for ( var i in resp ) {
             
             $('.dropdown-menu').append('<li class="lang" id='+ resp[i].language +'><a href="#">' + resp[i].name + '</a></li>');
+            $(".language").append(resp[i].name);
         }
     });
     
@@ -115,11 +116,24 @@ $(document).ready(function() {
         
         changeText( selectLang );
         translate({ text: $('#input_1').val().length !== 0 ? $('#input_1').val() : $('#input_2').val(), lang: selectLang }, $('#input_1').val().length !== 0 ? 'input_1' : 'input_2');
+<<<<<<< HEAD
+        // console.log( selectLang );
+        
+=======
+>>>>>>> 61c888abc9c697e4463f4a5ab6d44b1e8693f437
     });
     
-    $("#design").click(function(){
-        
+});
+
+$("#design").click(function(){
         $("#gif").show();
+<<<<<<< HEAD
+});
+
+$("#design").dblclick(function(){
+    $("#gif").hide();
+=======
     });
 
+>>>>>>> 61c888abc9c697e4463f4a5ab6d44b1e8693f437
 });
