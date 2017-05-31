@@ -20,8 +20,8 @@ function translate( obj, targetInput ) {
             targetInput = targetInput === 'input_1' ? '#input_2' : '#input_1';
         
             $(targetInput).val( obj.resp_text );
-            
-            $('#gif').html("<p>" + obj.resp_text + "</p>");
+        
+            $('#gif').html("<p>" + obj.resp_txt + "</p>");
         });
     }
     
@@ -116,24 +116,15 @@ $(document).ready(function() {
         
         changeText( selectLang );
         translate({ text: $('#input_1').val().length !== 0 ? $('#input_1').val() : $('#input_2').val(), lang: selectLang }, $('#input_1').val().length !== 0 ? 'input_1' : 'input_2');
-<<<<<<< HEAD
-        // console.log( selectLang );
-        
-=======
->>>>>>> 61c888abc9c697e4463f4a5ab6d44b1e8693f437
+
     });
     
 });
 
 $("#design").click(function(){
         $("#gif").show();
-<<<<<<< HEAD
 });
 
 $("#design").dblclick(function(){
     $("#gif").hide();
-=======
     });
-
->>>>>>> 61c888abc9c697e4463f4a5ab6d44b1e8693f437
-});
