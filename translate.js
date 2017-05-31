@@ -21,7 +21,7 @@ function translate( obj, targetInput ) {
         
             $(targetInput).val( obj.resp_text );
             
-            $('#gif').html("<p>" + obj.resp_text + "</p>");
+            $('#gif').html("<p class='lead text-center'>" + obj.resp_text + "</p>");
         });
     }
     
