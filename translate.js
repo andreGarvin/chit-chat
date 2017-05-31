@@ -20,8 +20,8 @@ function translate( obj, targetInput ) {
             targetInput = targetInput === 'input_1' ? '#input_2' : '#input_1';
         
             $(targetInput).val( obj.resp_text );
-        
-            $('#gif').html("<p>" + obj.resp_txt + "</p>");
+            
+            $('#gif').html("<p>" + obj.resp_text + "</p>");
         });
     }
     
