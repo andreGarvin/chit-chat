@@ -1,5 +1,4 @@
-
-var selectLang = 'ar';
+var selectLang = 'ko';
 function translate( obj, targetInput ) {
     
     if ( obj.text.length !== 0 ) {
@@ -28,7 +27,26 @@ function translate( obj, targetInput ) {
 }
 
 
-function bindInput( targetInput, value ) {
+function changeText( lang_id ) {
+        
+    $('.Language').click(function() {
+        
+        var lang_btn = $(this).attr('id');
+        var trg_txt = $('#'+lang_id).text();
+        
+        $('#' + lang_btn).text(trg_txt);
+    });
+}
+
+
+function flip( input ) {
+    
+    var tmp = $( input  === 'input_1' ? '#input_2' : '#input_1' ).val('');
+    bind_input(input  === 'input_1' ? 'input_2' : 'input_1', tmp);
+}
+
+
+function bind_input( targetInput, value ) {
     
     
     if ( value.length !== 0 ) {
@@ -70,6 +88,7 @@ function bindInput( targetInput, value ) {
 
 $(document).ready(function() {
     
+    var input;
     $.getJSON('https://www.googleapis.com/language/translate/v2/languages?target=en&key=AIzaSyCAg5StLQ3UHyaCdIdihjV8Od5sd8hGsDc', function( resp ) {
         resp = resp.data.languages;
         
@@ -85,30 +104,24 @@ $(document).ready(function() {
         if ( e.target.id === 'input_1' || 
             e.target.id === 'input_2' ) {
             
-            var input = e.target.id;
+            input = e.target.id;
             
             $('.Txt').keydown(function( e ) {
         
                 if ( e.which === 8 && $('#'+input).val().length === 1 ) {
             
-                    bindInput( input, '' );
+                    bind_input( input, '' );
                 }
             });
             
-            bindInput( input, $('#'+input).val() );
+            bind_input( input, $('#'+input).val() );
         }
     });
     
-    function changeText( lang_id ) {
+    $('#flip').click(function() {
         
-        $('.Language').click(function() {
-        
-            var lang_btn = $(this).attr('id');
-            var trg_txt = $('#'+lang_id).text();
-        
-            $('#' + lang_btn).text(trg_txt);
-        });
-    }
+        flip( input );
+    });
     
     $('.dropdown-menu').delegate('.lang', 'click', function() {
         
@@ -119,12 +132,12 @@ $(document).ready(function() {
 
     });
     
-});
-
-$("#design").click(function(){
+    $("#design").click(function(){
         $("#gif").show();
-});
-
-$("#design").dblclick(function(){
-    $("#gif").hide();
     });
+
+    $("#design").dblclick(function(){
+        $("#gif").hide();
+    });
+ 
+});
