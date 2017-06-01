@@ -19,14 +19,13 @@ h1{
 @keyframes gifs {
     0%   {color:red; left:0px; top:70px;}
     25%  {color:yellow; left:600px; top:70px;}
-    50%  {color:blue; left:600px; top:220px;}
-    75%  {color:green; left:0px; top:220px;}
+    50%  {color:blue; left:600px; top:200px;}
+    75%  {color:green; left:0px; top:200px;}
     100% {color:red; left:0px; top:70px;}
 }
 #gif{
     /*width: 100px;*/
     /*height: 100px;*/
-    font-size: 60px;
     color: red;
     position: absolute;
     animation-name: gifs;
@@ -35,4 +34,7 @@ h1{
     margin-top: 300px;
     margin-left: 300px;
     /*display: none;*/
+}
+p{
+    font-size: 100px !important;
 }
