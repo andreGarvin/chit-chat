@@ -1,3 +1,4 @@
+
 var selectLang = 'ko';
 function translate( obj, targetInput ) {
     
@@ -86,6 +87,7 @@ function bind_input( targetInput, value ) {
 }
 
 
+
 $(document).ready(function() {
     
     var input;
@@ -120,7 +122,12 @@ $(document).ready(function() {
     
     $('#flip').click(function() {
         
-        flip( input );
+        var tmp = $('#input_1').val();
+        var c = $('#input_2').val();
+    
+    
+        $('#input_1').val(c);
+        $('#input_2').val(tmp);
     });
     
     $('.dropdown-menu').delegate('.lang', 'click', function() {
