@@ -128,6 +128,13 @@ $(document).ready(function() {
     
         $('#input_1').val(c);
         $('#input_2').val(tmp);
+        
+        
+        var tmp_2 = $('#lang_1').text();
+        var d = $('#lang_2').text();
+        
+        $('#lang_2').text(tmp_2);
+        $('#lang_1').text(d);
     });
     
     $('.dropdown-menu').delegate('.lang', 'click', function() {
@@ -140,10 +147,12 @@ $(document).ready(function() {
     });
     
     $("#design").click(function(){
+        
         $("#gif").show();
     });
 
     $("#design").dblclick(function(){
+        
         $("#gif").hide();
     });
  
