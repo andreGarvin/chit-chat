@@ -1,9 +1,9 @@
 h1{
-
-    font-size: 100px
+    font-size:50px;
 }
 .btn {
     margin-bottom: 10px;
+    font-size: 20px;
 }
 .center{
     padding: 50px 0;
@@ -17,11 +17,11 @@ h1{
     font-size: 20px;
 }
 @keyframes gifs {
-    0%   {color:red; left:0px; top:70px;}
-    25%  {color:yellow; left:600px; top:70px;}
-    50%  {color:blue; left:600px; top:200px;}
-    75%  {color:green; left:0px; top:200px;}
-    100% {color:red; left:0px; top:70px;}
+    0%   {color:red; left:0px; top:100px;}
+    25%  {color:yellow; left:600px; top:100px;}
+    50%  {color:blue; left:600px; top:230px;}
+    75%  {color:green; left:0px; top:230px;}
+    100% {color:red; left:0px; top:100px;}
 }
 #gif{
     /*width: 100px;*/
@@ -37,4 +37,5 @@ h1{
 }
 p{
     font-size: 100px !important;
+    font-weight: bolder !important;
 }
